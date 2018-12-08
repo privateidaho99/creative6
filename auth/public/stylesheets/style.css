@@ -1,8 +1,72 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #474636;
+  font-family: 'Muli', sans-serif;
+  background-color: #F9FCF9;
+  color: black;
+}
+
+.img-back {
+  background-image: url(mountain.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.top-header {
+  padding-top: 1rem 0;
+  font-weight: bold;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+.login {
+  color: white;
+}
+.created {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }
 
 a {
-  color: #00B7FF;
+  text-decoration: underline;
+  color: white;
+  font-weight: bold;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+input {
+  width: 43%;
+  margin: 1%;
+}
+
+.wrap {
+  width: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: rgba(175, 220, 236, 0.6);
+  font-weight: bold;
+}
+
+.centered {
+  display: block;
+  padding-top: 1rem 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 280px;
+  text-align: center;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+span {
+  font-size: 18px;
 }
