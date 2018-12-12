@@ -1,54 +1,73 @@
 body {
-    color: #434B4D;
+    color: #3e5f6c;
     font-family: 'Muli', sans-serif;
-    background-color: #F5F5F5;
+    background-color: #f7fbfd;
     padding-top:4rem;
     
 }
+.btn {
+    background-color: #7ed686;
+    color: #FFFFFF;
+    font-weight:bold;
+    padding:10px;
+}
 
-.item-container {
+.btn:hover {
+    background-color: #47b651;
+}
+
+#main {
     background-color:#FFFFFF;
-    padding: 20px 0px;
-    border-bottom:1px solid #75BBCD;
+    padding: 40px 20px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 10px 3px #eaf2f6;
+    box-shadow: 0 0 10px 3px #eaf2f6;
+    margin: 30px 0;
 }
 
-.item-container:only-child, .item-container:last-child {
-    border:0;
+input {
+    width:100%;
+    margin: 5px 0;
+    line-height:40px;
+        -webkit-border-radius: 5px;
+border-radius: 5px;
 }
 
-.container {
-    -webkit-user-select: none; /* Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+/Edge */
-    user-select: none; /* Standard */
+input[type=text], input[type=password], input[type=email] {
+    border: 1px solid #d3e8f6;
+    padding: 5px;
 }
 
-.container h3 {
-    font-size: 26px;
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+    outline:none;
+    border: 1px solid #6da6cd;
+}
+input[type=checkbox] {
+    margin-top:5px;
+    width:10%;
+    float:left;
+    line-height:15px;
+}
+.checkbox {
+    font-size:11px;
+    float:left;
+    line-height:23px;
 }
 
-.quantity i {
-    font-size: 18px;
-    line-height:60px;
-    color: #75BBCD;
+.intro-text {
+    font-style:italic;
+    font-size: .9rem;
+    color: #879faf;
 }
 
-.quantity-number {
-    font-size:40px;
+.register-text {
+    margin-top:30px;
+    font-style:italic;
+    font-size: .9rem;
+    color: #879faf;
 }
 
-.price {
-    color: #86969A;
-    font-size:18px;
-}
-
-.delete i{
-    font-size: 18px;
-    line-height:60px;
-    color: #ff293d;
-    line-height:60px;
-}
-
-.delete:hover, .quantity:hover {
-    cursor: pointer;
+.login {
+    font-weight:bold;
 }

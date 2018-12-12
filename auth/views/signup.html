@@ -1,11 +1,46 @@
 <!doctype html>
 <html>
-    
+
 <head>
     <title>User Login and Sessions</title>
-    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+
+    <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
 </head>
-        
+
+<body class="img-back">
+    <div class="form-container container">
+        <div class="row mx-auto text-center" id="title">
+            <h1 class="form-header login col-12">Welcome!</h1>
+            <div class="intro-text col-12">Tell us a little about yourself.</div>
+        </div>
+        <div class="row mx-auto text-center" >
+            <div class="col-4 mx-auto text-center" id="main">
+                <form class="wrap col-12" method="POST" action="/signup">
+                    <input type="text" id="username" name="username" placeholder="Username" required><br>
+                    <input type="password" id="password" name="password" placeholder="Password" required><br>
+                    <input type="email" id="email" name="email" placeholder="Email"><br>
+                    <input type="checkbox" required><label class="checkbox">I agree to the <a href="/journalMeTOC.pdf" target="_blank">Terms and Conditions</a></label><br>
+                    <input type="submit" class="btn" id="register" value="Register">
+                </form>
+                <div class="col-12 register-text">Already have an account? <a href="/login">Sign in here.</a></div>
+            </div>
+        </div>
+
+        <hr>
+        <div class="row">
+            <div class="col-6 mx-auto text-center">
+                <span class="created" id="signupMsg">
+                    <%= msg %>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!--
 <body class="img-back">  
     <div class="form-container">
         <p class="form-header top-header centered">Sign Up</p>
@@ -25,4 +60,4 @@
     </span>
 </body> 
 
-</html>
+</html>-->
