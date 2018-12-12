@@ -2,26 +2,18 @@
 <html ng-app="myApp">
     
 <head>
-    <title>User Login and Sessions</title>
+    <title>User Journal Entry</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
 </head>
         
 <body class="img-back">  
     <div class="form-container" ng-controller="myController">
-        <p id="sectionTitle" class="form-header top-header">User Profile</p>
-        <form class="wrap created" method="POST" action="/user/update">
-            <label>Username:</label>
-            <input type="text" id="username" name="username" ng-model="user.username" disabled><br>
-            <label>Email:</label>
-            <input type="email" id="email" name="email" ng-model="user.email"><br>          
-            <label>Favorite Color:</label>
-            <input type="text" id="color" name="color" ng-model="user.color"><br>   
-            <input type="submit" id="save" value="Save">
+        <p id="sectionTitle" class="form-header top-header">Add Journal Entry</p>
+        <form method="POST" action="/user/update">
+            <input type="text" id="journal" name="journal"  ng-model="user.journal" placeholder="e.g. Buy eggs"><br>   
+            <input type="submit" id="save" value="Add to List">
         </form>
     </div>
-    <form class="wrap centered" method="POST" action="/user/delete">
-        <input type="submit" id="delete" value="Delete User">
-    </form>
     <hr>
     <span class="created" id="userMsg">
     <%= msg %>

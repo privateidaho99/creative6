@@ -10,14 +10,12 @@
     <div class="form-container">
         <h1 class="form-header login">Login</h1>
         <form class="wrap" method="POST" action="/login">
-            <label>Username:</label>
-            <input type="text" id="username" name="username"><br>
-            <label>Password:</label>
-            <input type="password" id="password" name="password"><br>
+            <input type="text" id="username" name="username" placeholder="Username"><br>
+            <input type="password" id="password" name="password" placeholder="Password"><br>
             <input type="submit" id="login" value="Login">
         </form>
     </div>
-    <a id="signUpLink" href="/signup">Sign Up</a>
+      <div>Don't have an account? <a href="/signup">Register here.</a></div>
     <hr>
     <span class="centered" id="loginMsg">
     <%= msg %>
