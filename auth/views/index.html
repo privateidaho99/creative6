@@ -1,31 +1,39 @@
 <!doctype html>
 <html ng-app="myApp"> 
-    
+
 <head>
     <title>User Login and Sessions</title>
+
     <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.css" />
         <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
 </head>
+
+<body class="img-back">
+    <div class="form-container container" ng-controller="myController">
+        <div class="row mx-auto text-center" id="title">
+            <h1 class="form-header login col-12 top-header" id="welcomeText">Welcome! You are Logged In as <%= username %></h1>
+            <div class="intro-text col-12"><a id="logoutLink" href="/logout">Logout</a> | <a id="editLink" href="/user">Make Journal Entry</a></div>
+        </div>
+
+        <hr>
+        <div class="row">
+            <div class="col-8 mx-auto text-center" id="main">
+                <span class="created" id="indexMsg">
+                    <%= msg %>
+                </span>
+            </div>
+        </div>
         
-<body class="img-back">  
-    <div ng-controller="myController">
-        <h2 class="top-header" id="welcomeText">Welcome! You are Logged In as
-            <%= username %>
-        </h2>
-        <a id="logoutLink" href="/logout">Logout</a>
-        <a id="editLink" href="/user">Make Journal Entry</a>
+        <hr>
+        <div class="row">
+            <div class="col-8 mx-auto text-center" id="main">
+                <span class="created" id="indexMsg">
+                    Your journal entry is:
+                    <%= journal %>
+                </span>
+            </div>
+        </div>
     </div>
-    <hr>
-    <span class="created" id="indexMsg">
-        <%= msg %>
-    </span>
-    <hr>
-    <span class="created" id="journalText">
-    Your journal entry is:
-        <%= journal %>
-      </span>
     <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
     <script src="/javascripts/my_app.js"></script>
 </body>
-      
-</html>

@@ -1,27 +1,39 @@
 <!doctype html>
 <html ng-app="myApp">
-    
+
 <head>
     <title>User Journal Entry</title>
+
     <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.css" />
         <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
 </head>
-        
-<body class="img-back">  
-    <div class="form-container" ng-controller="myController">
-        <p id="sectionTitle" class="form-header top-header">Add Journal Entry</p>
-        <form method="POST" action="/user/update">
-            <input type="text" id="journal" name="journal"  ng-model="user.journal" placeholder="e.g. Buy eggs"><br>   
-            <input type="submit" id="save" value="Add to List">
-        </form>
+
+<body class="img-back">
+    <div class="form-container container">
+        <div class="row mx-auto text-center" id="title">
+            <h1 class="form-header login col-12">Add Journal Entry!</h1>
+        </div>
+        <div class="row mx-auto text-center" >
+            <div class="col-4 mx-auto text-center" id="main">
+                <form class="wrap col-12" method="POST" action="/user/update">
+                    <input type="text" id="journal" name="journal"  ng-model="user.journal" placeholder="I love my mom!"><br>   
+                    <input type="submit" class="btn" id="save" value="Add to Journal">
+                </form>
+                <div class="col-12 register-text"><a class="text-center mx-auto" id="homeLink" href="/">Home</a></div>
+            </div>
+        </div>
+
+        <hr>
+        <div class="row">
+            <div class="col-6 mx-auto text-center">
+                <span class="created" id="userMsg">
+                    <%= msg %>
+                </span>
+            </div>
+        </div>
     </div>
-    <hr>
-    <span class="created" id="userMsg">
-    <%= msg %>
-    </span>
     <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
     <script src="/javascripts/my_app.js"></script>
-    <a id="homeLink" href="/">Home</a>
 </body>
 
 </html>
